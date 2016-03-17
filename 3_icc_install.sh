@@ -17,15 +17,8 @@ sed -e "/ACCEPT_EULA=/ s/decline/accept/" \
 ./install.sh -s silent.cfg
 cd ..
 
-exit
-# intel fortran (ifort)
-wget $SITE/dkg/l_fcompxe_2013_sp1.2.144.tgz
-tar zxf l_fcompxe_2013_sp1.2.144.tgz
-cd l_fcompxe_2013_sp1.2.144
-sed -e "/ACCEPT_EULA=/ s/decline/accept/" \
-    -e "/ACTIVATION_LICENSE_FILE=/ s/$/\/root\/license.lic/" \
-    -e "s/#ACTIVATION_LICENSE_FILE/ACTIVATION_LICENSE_FILE/" \
-    -e "/ACTIVATION_TYPE=/ s/exist_lic/license_file/" \
-    -i".bak" silent.cfg
-./install.sh -s silent.cfg
-cd ..
+echo '----------------------------------------------'
+echo ''
+echo 'Please enter this command `source /opt/intel/bin/compilervars.sh intel64`'
+echo ''
+echo '----------------------------------------------'

@@ -8,7 +8,7 @@ sh make_generic
 cp Make.UNKNOWN ../Make.Linux
 cd ..
 sed -e "/ARCH \+=/ s/UNKNOWN/Linux/" \
-    -e "/TOPdir \+=/ s/\$(HOME)\/hpl/\$(HOME)\/hpl-2\.2/" \
+    -e "/TOPdir \+=/ s/\$(HOME)\/hpl/\$(HOME)\/TSCC\/hpl-2\.2/" \
     -e "/MPdir \+=/ s/$/ \/opt\/openmpi-icc/" \
     -e "/MPinc \+=/ s/^/#/" \
     -e "/MPlib \+=/ s/$/ \$(MPdir)\/lib\/libmpi.so/" \
