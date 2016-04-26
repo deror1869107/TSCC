@@ -50,5 +50,10 @@ cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
+# bash profile
+echo "source /opt/intel/compilers_and_libraries/linux/bin/compilervars.sh intel64" >> /root/.bash_profile
+echo "source /opt/intel/impi/5.1.3.181/bin64/mpivars.sh" >> /root/.bash_profile
+echo "source /opt/intel/mkl/bin/mklvars.sh intel64" >> /root/.bash_profile
+
 # passwd
 passwd
