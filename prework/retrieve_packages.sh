@@ -1,4 +1,4 @@
-#!/bin/sh -ev
+#!/bin/sh -v
 
 #clean cache
 rm -f /var/cache/pacman/pkg/*
@@ -13,4 +13,6 @@ done
 
 #copy packages
 cp /var/cache/pacman/pkg/* pacman/
-cp ~/*.tar.xz packages/
+cp ~/*.pkg.tar.xz pacman/
+
+cp ~/parallel*.tgz packages/ || echo "Please download icc into root's home"
