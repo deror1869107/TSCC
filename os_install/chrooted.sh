@@ -55,5 +55,9 @@ echo "source /opt/intel/compilers_and_libraries/linux/bin/compilervars.sh intel6
 echo "source /opt/intel/impi/5.1.3.181/bin64/mpivars.sh" >> /root/.bash_profile
 echo "source /opt/intel/mkl/bin/mklvars.sh intel64" >> /root/.bash_profile
 
+# services
+./services/infiniband.sh
+./services/remoteshell.sh
+
 # passwd
 passwd

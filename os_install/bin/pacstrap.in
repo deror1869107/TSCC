@@ -10,7 +10,7 @@
 
 shopt -s extglob
 
-. common
+. ./bin/common
 
 hostcache=0
 copykeyring=1
