@@ -26,6 +26,7 @@ swapon "${DISK1}2"
 
 # base system
 ./bin/pacstrap.in /mnt/ ../prepare/pacman/*
+./bin/pacstrap.in /mnt/ ../prepare/pacman_aur/*
 cp -r ../prepare/packages/ /root/packages/
 
 # fstab

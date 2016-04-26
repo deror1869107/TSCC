@@ -1,5 +1,10 @@
 #!/bin/sh -v
 
+# create directory
+mkdir -p pacman
+mkdir -p pacman_aur
+mkdir -p packages
+
 #clean cache
 rm -f /var/cache/pacman/pkg/*
 rm -f packages/*
@@ -13,6 +18,6 @@ done
 
 #copy packages
 cp /var/cache/pacman/pkg/* pacman/
-cp ~/*.pkg.tar.xz pacman/
+cp ~/*.pkg.tar.xz pacman_aur/
 
 cp ~/parallel*.tgz packages/ || echo "Please download icc into root's home"
