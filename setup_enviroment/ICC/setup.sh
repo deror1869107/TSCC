@@ -15,6 +15,6 @@ cd ..
 
 echo '----------------------------------------------'
 echo ''
-echo 'Please enter this command `source /opt/intel/bin/compilervars.sh intel64`'
+echo 'Please enter this command `source ~/.bash_profile`'
 echo ''
 echo '----------------------------------------------'
