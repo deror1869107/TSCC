@@ -27,9 +27,9 @@ swapon "${DISK1}2"
 # base system
 ./bin/pacstrap.in /mnt/ ../prework/pacman/*
 ./bin/pacstrap.in /mnt/ ../prework/pacman_aur/*
-cp -r ../prework/packages/ /root/packages/
 
 # fstab
 genfstab -p /mnt/ | tee /mnt/etc/fstab
 
 cp -r ../ /mnt/root
+cp -r /mnt/archiso/bootmnt/parallel*.tgz /mnt/root/prework/packages
