@@ -26,10 +26,11 @@ locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
 # netctl
-echo "Description='A basic static ethernet connection'
 echo "Does this machine have external network? (Y/N)"
 read extnet
 if [ extnet == "Y" -o extnet == "y" ] ; then
+
+echo "Description='A basic static ethernet connection'
 Interface=$IF
 Connection=ethernet
 IP=static
