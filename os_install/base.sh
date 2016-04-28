@@ -25,9 +25,9 @@ swapon "${DISK1}2"
 
 
 # base system
-./bin/pacstrap.in /mnt/ ../prepare/pacman/*
-./bin/pacstrap.in /mnt/ ../prepare/pacman_aur/*
-cp -r ../prepare/packages/ /root/packages/
+./bin/pacstrap.in /mnt/ ../prework/pacman/*
+./bin/pacstrap.in /mnt/ ../prework/pacman_aur/*
+cp -r ../prework/packages/ /root/packages/
 
 # fstab
 genfstab -p /mnt/ | tee /mnt/etc/fstab

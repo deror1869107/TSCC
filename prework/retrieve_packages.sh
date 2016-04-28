@@ -11,7 +11,7 @@ rm -f pacman/*
 
 #retrieve packages
 pacman -Syy
-for package in $( pacman -Q | cut -f 1 -d' ' | tr "\n" ' ' ) ; do
+for package in $( pacman -Q | cut -f 1 -d'-' | tr "\n" ' ' ) ; do
     pacman -Sw --noconfirm $package
 done
 
