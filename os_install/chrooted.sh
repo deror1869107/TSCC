@@ -27,6 +27,9 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
 # netctl
 echo "Description='A basic static ethernet connection'
+echo "Does this machine have external network? (Y/N)"
+read extnet
+if [ extnet == "Y" -o extnet == "y" ] ; then
 Interface=$IF
 Connection=ethernet
 IP=static
@@ -40,6 +43,7 @@ DNSSearch='cs.nctu.edu.tw'
 " >> /etc/netctl/ethernet
 
 netctl enable ethernet
+fi
 
 # initramfs
 mkinitcpio -p linux
@@ -54,10 +58,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo "source /opt/intel/compilers_and_libraries/linux/bin/compilervars.sh intel64" >> /root/.bash_profile
 echo "source /opt/intel/impi/5.1.3.181/bin64/mpivars.sh" >> /root/.bash_profile
 echo "source /opt/intel/mkl/bin/mklvars.sh intel64" >> /root/.bash_profile
-
-# services
-./services/infiniband.sh
-./services/remoteshell.sh
 
 # passwd
 passwd

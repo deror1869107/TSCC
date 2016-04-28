@@ -7,7 +7,6 @@ mkdir -p packages
 
 #clean cache
 rm -f /var/cache/pacman/pkg/*
-rm -f packages/*
 rm -f pacman/*
 
 #retrieve packages

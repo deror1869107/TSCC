@@ -9,7 +9,7 @@ make install
 cd -
 
 # Setup TauDEM
-tar xvf ../../prework/packages/v5.3.3.tar.gz -C ~
+tar xvf ../../prework/packages/TauDEM.v5.3.3.tar.gz -C ~
 cp ./makefile ~/TauDEM-5.3.3/src/
 cd ~/TauDEM-5.3.3/src/
 make -j5
