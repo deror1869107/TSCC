@@ -17,6 +17,7 @@ echo "10.0.0.1
 echo "##### RSH is set #####"
 
 # ssh (Only node1 can access all node2 without passwords)
+echo "PermitRootLogin Yes" >> /etc/ssh/sshd_config
 systemctl enable sshd.service
 
 
