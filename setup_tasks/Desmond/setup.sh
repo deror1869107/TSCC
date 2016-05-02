@@ -7,5 +7,9 @@ echo "##### Scratch foler: /tmp #####"
 ~/Desmond_Maestro_2016.1/INSTALL
 echo "export SCHRODINGER=/opt/schrodinger2016-1" >> ~/.bash_profile
 echo "##### Please call source ~/.bash_profile #####"
+cd /opt
+mkdir schrodinger
+cd schrodinger
+mkdir licenses
 cp ~/Desmond_Maestro_2016.1/license.lic /opt/schrodinger/licenses
 
