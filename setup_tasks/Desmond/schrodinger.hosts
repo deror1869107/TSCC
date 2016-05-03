@@ -1,0 +1,34 @@
+name: localhost
+host: localhost
+schrodinger: /opt/schrodinger2016-1
+processors: 8
+processors_per_node: 8
+
+name: node1
+host: node1
+schrodinger: /opt/schrodinger2016-1
+processors: 4
+processors_per_node: 4
+gpus: 1
+
+name: node2
+host: node2
+schrodinger: /opt/schrodinger2016-1
+processors: 4
+processors_per_node: 4
+gpus: 1
+
+name: node3
+host: node3
+schrodinger: /opt/schrodinger2016-1
+processors: 4
+processors_per_node: 4
+gpus: 1
+
+name: node4
+host: node4
+schrodinger: /opt/schrodinger2016-1
+processors: 4
+processors_per_node: 4
+gpus: 1
+

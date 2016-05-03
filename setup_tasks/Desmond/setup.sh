@@ -12,4 +12,5 @@ mkdir schrodinger
 cd schrodinger
 mkdir licenses
 cp ~/Desmond_Maestro_2016.1/license.lic /opt/schrodinger/licenses
+cp ./schrodinger.hosts /opt/schrodinger2016-1/
 
