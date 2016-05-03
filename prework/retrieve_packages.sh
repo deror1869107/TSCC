@@ -19,4 +19,3 @@ done
 cp /var/cache/pacman/pkg/* pacman/
 cp ~/*.pkg.tar.xz pacman_aur/
 
-cp ~/parallel*.tgz packages/ || echo "Please download icc into root's home"

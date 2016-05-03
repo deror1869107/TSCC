@@ -25,11 +25,15 @@ swapon "${DISK1}2"
 
 
 # base system
-./bin/pacstrap.in /mnt/ ../prework/pacman/*
+if [ $KNL == "haswell" ] ; then
+./bin/pacstrap.in /mnt/ ../prework/linux-haswell/* ../prework/pacman/*
+else
+./bin/pacstrap.in /mnt/ ../prework/linux-nehalem/* ../prework/pacman/*
+fi
 ./bin/pacstrap.in /mnt/ ../prework/pacman_aur/*
 
 # fstab
 genfstab -p /mnt/ | tee /mnt/etc/fstab
 
 cp -r ../ /mnt/root
-cp -r /mnt/archiso/bootmnt/parallel*.tgz /mnt/root/prework/packages
+cp -r /run/archiso/bootmnt/parallel*.tgz /mnt/root/prework/packages
